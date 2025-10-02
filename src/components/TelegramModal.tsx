@@ -9,7 +9,7 @@ interface TelegramModalProps {
 
 const TelegramModal = ({ isOpen, onClose }: TelegramModalProps) => {
   const handleTelegramClick = () => {
-    window.open("https://t.me/+JSky86_04M2Zjd1", "_blank");
+    window.open("https://t.me/+NH1kewfKuaswMzg9", "_blank");
     onClose();
   };
 

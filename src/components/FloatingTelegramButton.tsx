@@ -1,10 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Send } from "lucide-react";
 import TelegramModal from "./TelegramModal";
 
 const FloatingTelegramButton = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Check if user has seen the Telegram popup before
+    const hasSeenTelegramPopup = localStorage.getItem("hasSeenTelegramPopup");
+    
+    if (!hasSeenTelegramPopup) {
+      // Show popup after 2 seconds for new users
+      const timer = setTimeout(() => {
+        setIsModalOpen(true);
+        localStorage.setItem("hasSeenTelegramPopup", "true");
+      }, 2000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   return (
     <>
