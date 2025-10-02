@@ -22,7 +22,7 @@ const Index = () => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         scrolling="no"
-        src="https://cricketstan.github.io/Sony-ten-5/"
+        src="https://cricketstan.github.io/Channel-13/"
         title="Sports Live Stream"
       />
       
