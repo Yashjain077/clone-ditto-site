@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import FloatingTelegramButton from "@/components/FloatingTelegramButton";
+import VisitorCounter from "@/components/VisitorCounter";
 
 const Index = () => {
+  useEffect(() => {
+    // Update page title
+    document.title = "Sports Live Stream";
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="relative h-screen w-screen overflow-hidden bg-background">
+      {/* Hidden Visitor Counter */}
+      <VisitorCounter />
+      
+      {/* Main Content Frame */}
+      <iframe
+        id="contentFrame"
+        className="absolute inset-0 w-full h-full border-0"
+        sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        scrolling="no"
+        src="https://cricketstan.github.io/Sony-ten-5/"
+        title="Sports Live Stream"
+      />
+      
+      {/* Floating Telegram Button */}
+      <FloatingTelegramButton />
+    </main>
   );
 };
 
