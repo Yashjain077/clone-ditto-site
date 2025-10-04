@@ -25,7 +25,7 @@ const FloatingTelegramButton = () => {
     <>
       <Button
         onClick={() => setIsModalOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-[hsl(var(--telegram-blue))] hover:bg-[hsl(var(--telegram-hover))] shadow-lg transition-all hover:scale-110 z-50"
+        className="fixed top-6 left-6 h-14 w-14 rounded-full bg-[hsl(var(--telegram-blue))] hover:bg-[hsl(var(--telegram-hover))] shadow-lg transition-all hover:scale-110 z-50"
         size="icon"
         aria-label="Open Telegram"
       >
